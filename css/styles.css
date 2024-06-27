@@ -2,7 +2,7 @@
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     background-color: rgb(73, 9, 133);
     padding: 230px 100px;
@@ -25,4 +25,5 @@ h1 {
 #btnReestablecer {
     background-color: hsl(170, 89%, 38%);
     color: rgb(73, 9, 133);
+    
 }

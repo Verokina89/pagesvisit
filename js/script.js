@@ -1,21 +1,15 @@
 //poner un contador de visita. 
-//Suma cada visita al recargarla pag. Tiene que quedar guardadas
+//Suma cada visita al recargarla pag. Tiene que quedar guardadas en localStorage
 //Hacer funcionar el boton de "restablecer contador"". Pero que comience desde 1
-
-localStorage.setItem("visitCounter", 1);
+localStorage.setItem("visitCounter",1);
 console.log(localStorage.getItem("visitCounter"));
+let btnCero = document.getElementById("btnReestablecer");
 
-const btncero = document.getElementById("btnReestablecer");
+const visitCounter = localStorage.getItem("contadorVisitas");
 
-
-const visitCounter= {
+const visitConter={
     counter: 1,
 };
-console.log(visitCounter);
-
-const visitCouenter = localStorage.getItem(visitCounter);
-let counter;
-
 if(!visitCounter){
     counter = 0;
     localStorage.setItem(visitCounter, counter);
@@ -28,16 +22,10 @@ if(!visitCounter){
 document.getElementById("contadorVisitas").innerHTML = counter;
 
 
-function reestablecer (){
-    localStorage.removeItem("contadorVisitas");
-    location.reload();
-}
-console.log(reestablecer);
-
-btncero.addEventListener('click',()=> {
+btnCero.addEventListener('click',()=> {
     if (counter > 0) {
         counter --;
-        btncero.addEventListener = " ";
+        btnCero.addEventListener = " ";
     }
 });
-getComputedStyle.btncero
+getComputedStyle.btnCero
